@@ -1,5 +1,5 @@
-from model.itens import Item
-from dao.itens_dao import ItemDAO
+from dao import ItemDAO
+from model import Item
 
 class ItemController:
     def __init__(self):

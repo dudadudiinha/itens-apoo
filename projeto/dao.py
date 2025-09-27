@@ -1,5 +1,5 @@
-from model.itens import Item
 import sqlite3
+from model import Item
 
 class ItemDAO:
     _NOME_ARQUIVO_DB = 'inventario.db'

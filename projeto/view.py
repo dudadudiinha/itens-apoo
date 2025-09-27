@@ -1,6 +1,5 @@
 import streamlit as st
-import time
-from controller.itens_controller import ItemController
+from controller import ItemController
 
 controller = ItemController()
 st.title("Cadastro de Itens")
@@ -10,9 +9,7 @@ quantidade = st.number_input("Quantidade", min_value=0)
 
 if st.button("Adicionar item"):
     controller.criarItem(descricao, quantidade)
-    st.success("Item adicionado com sucesso")
-    time.sleep(4)
-    st.rerun()
+    st.success("Item adicionado com sucesso!")
 
 st.subheader("Lista de itens")
 itens = controller.obterTodosOsItens()
