@@ -5,7 +5,7 @@ class ItemController:
     def __init__(self):
         self.dao = ItemDAO()
 
-    def criarItem(self, descricao: str, quantidade: int):
+    def criarItem(self, descricao, quantidade):
         item = Item(descricao=descricao, quantidade=quantidade)
         self.dao.adicionar(item)
 
